@@ -1,13 +1,11 @@
+import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Products from './components/Products';
-import Services from './components/Services';
 import Gallery from './components/Gallery';
+import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import WhatsAppFloat from './components/WhatsAppFloat';
-import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -15,15 +13,12 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Products />
-        <Services />
         <Gallery />
+        <Services />
         <Testimonials />
         <Contact />
       </main>
       <Footer />
-      <WhatsAppFloat />
-      <BackToTop />
     </div>
   );
 }

@@ -4,11 +4,11 @@ import { Menu, X, Phone, MapPin } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Actualizar menú - eliminar "Productos" y dejar "Galería"
   const menuItems = [
     { label: 'Inicio', href: '#home' },
-    { label: 'Productos', href: '#products' },
-    { label: 'Servicios', href: '#services' },
     { label: 'Galería', href: '#gallery' },
+    { label: 'Servicios', href: '#services' },
     { label: 'Testimonios', href: '#testimonials' },
     { label: 'Contacto', href: '#contact' },
   ];
