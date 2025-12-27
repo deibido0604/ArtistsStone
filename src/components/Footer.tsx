@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-stone-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
@@ -61,27 +61,6 @@ const Footer = () => {
               <li><a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">Encimeras de Cuarzo</a></li>
               <li><a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">Pisos de Porcelanato</a></li>
             </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">Newsletter</h3>
-            <p className="text-stone-400 mb-6">
-              Suscríbete para recibir ofertas exclusivas y novedades.
-            </p>
-            <form className="space-y-4">
-              <input
-                type="email"
-                placeholder="Tu correo electrónico"
-                className="w-full px-4 py-3 bg-stone-800 border border-stone-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 rounded-lg transition-colors"
-              >
-                Suscribirse
-              </button>
-            </form>
           </div>
         </div>
 
