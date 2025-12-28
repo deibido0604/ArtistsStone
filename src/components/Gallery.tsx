@@ -11,7 +11,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-const Gallery = () => {
+const Gallery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -22,193 +22,61 @@ const Gallery = () => {
   const galleryItems = [
     {
       id: 1,
-      title: "Cocina Moderna con Isla",
+      title: "Cocina Moderna con Isla de Granito",
       category: "granito",
       year: 2024,
-      mainImage:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200",
-      images: [
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200",
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200",
-        "https://images.unsplash.com/photo-1600585154340-963ed7476d06?auto=format&fit=crop&w=1200",
-      ],
-      description:
-        "Cocina moderna con isla central en granito negro absoluto. Diseño minimalista con iluminación LED integrada y electrodomésticos de última generación.",
+      mainImage: "/gallery/Cocina_Isla_Granito.png",
+      images: ["/gallery/Cocina_Isla_Granito.png", "/gallery/Cocina_Isla_Granito.jpeg"],
+      description: "Cocina moderna con isla central en granito cafe absoluto.",
       features: [
         "Isla central con almacenamiento",
-        "Iluminación LED bajo gabinete",
         "Sistema de extracción silencioso",
         "Encimera de 3cm de grosor",
       ],
       materials: [
-        "Granito Negro Absoluto",
+        "Granito Café Absoluto",
         "Acero Inoxidable",
         "Madera de Roble",
       ],
     },
     {
       id: 2,
-      title: "Baño de Lujo Mármol Blanco",
-      category: "baño",
-      year: 2023,
-      mainImage:
-        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200",
-      images: [
-        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200",
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200",
-      ],
+      title: "Cocina con Barra y Encimera de Granito",
+      category: "granito",
+      year: 2024,
+      mainImage: "/gallery/Encimera_Cocina_Granito.png",
+      images: ["/gallery/Encimera_Cocina_Granito.png", "/gallery/Encimera_Cocina_Granito.jpg"],
       description:
-        "Baño principal de lujo con mármol blanco carrara, mobiliario suspendido y sistema de hidromasaje. Acabados en bronce y espejo inteligente.",
+        "Cocina con barra funcional y encimera de granito natural, ideal para espacios compactos y modernos.",
       features: [
-        "Ducha de hidromasaje",
-        "Calefacción radiante",
-        "Espejo inteligente con LED",
-        "Mobiliario suspendido",
+        "Barra tipo península",
+        "Lavaplatos integrado",
+        "Acabado rústico en base de ladrillo",
+        "Encimera pulida de alta resistencia",
       ],
-      materials: [
-        "Mármol Carrara",
-        "Porcelanato Italiano",
-        "Bronce Satín",
-        "Cristal Templado",
-      ],
+      materials: ["Granito natural", "Acero inoxidable", "Ladrillo decorativo"],
     },
     {
       id: 3,
-      title: "Comedor Familiar Rústico",
-      category: "comedor",
-      year: 2024,
-      mainImage:
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200",
-      images: [
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200",
-        "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=1200",
-      ],
-      description:
-        "Comedor familiar con mesa de granito travertino y sillas tapizadas. Diseño rústico moderno con iluminación focalizada y espacio para 8 personas.",
-      features: [
-        "Mesa extensible",
-        "Sillas ergonómicas",
-        "Iluminación regulable",
-        "Estantería integrada",
-      ],
-      materials: [
-        "Granito Travertino",
-        "Madera de Teca",
-        "Tela de Lino",
-        "Hierro Forjado",
-      ],
-    },
-    {
-      id: 4,
-      title: "Pisos Cerámicos Italianos",
-      category: "cerámica",
-      year: 2023,
-      mainImage:
-        "https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=1200",
-      images: [
-        "https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=1200",
-        "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=1200",
-      ],
-      description:
-        "Instalación completa de pisos cerámicos italianos de alta gama en acabado mate. Patrón de colocación personalizado y juntas mínimas.",
-      features: [
-        "Resistente a rayaduras",
-        "Antideslizante",
-        "Fácil mantenimiento",
-        "Garantía de 10 años",
-      ],
-      materials: [
-        "Cerámica Italiana 60x60",
-        "Pegamento Premium",
-        "Juntas de Epoxi",
-      ],
-    },
-    {
-      id: 5,
-      title: "Isla de Cocina en Granito Negro",
-      category: "granito",
-      year: 2024,
-      mainImage:
-        "https://images.unsplash.com/photo-1600585154340-963ed7476d06?auto=format&fit=crop&w=1200",
-      images: [
-        "https://images.unsplash.com/photo-1600585154340-963ed7476d06?auto=format&fit=crop&w=1200",
-      ],
-      description:
-        "Isla de cocina independiente en granito negro con barra desayunadora. Integración de almacenamiento inteligente y taburetes personalizados.",
-      features: [
-        "Barras para colgar utensilios",
-        "Cajones con sistema soft-close",
-        "Tomacorrientes USB",
-        "Superficie resistente al calor",
-      ],
-      materials: ["Granito Negro Galaxy", "Acero Pulido", "Madera de Nogal"],
-    },
-    {
-      id: 6,
-      title: "Vanitorio Doble con Iluminación LED",
+      title: "Ducha Moderna con Revestimiento Tipo Mármol",
       category: "baño",
-      year: 2023,
-      mainImage:
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200",
-      images: [
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200",
-      ],
-      description:
-        "Vanitorio doble con encimera de cuarzo y iluminación LED integrada. Espejos amplios y almacenamiento optimizado para baño compartido.",
-      features: [
-        "Iluminación LED regulable",
-        "Espejos con antiempañante",
-        "Grifería táctil",
-        "Cajones impermeables",
-      ],
-      materials: ["Cuarzo Blanco", "Cristal Templado", "Aluminio Anodizado"],
-    },
-    {
-      id: 7,
-      title: "Mesa de Centro Travertino",
-      category: "comedor",
       year: 2024,
-      mainImage:
-        "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=1200",
+      mainImage: "/gallery/Ducha_Lujo_Ceramica.png",
       images: [
-        "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=1200",
+        "/gallery/Ducha_Lujo_Ceramica.png",
       ],
       description:
-        "Mesa de centro en travertino natural con base metálica. Diseño minimalista que complementa espacios modernos y contemporáneos.",
+        "Ducha tipo walk-in con revestimiento tipo mármol en tonos claros, iluminación empotrada y sistema de ducha doble para una experiencia moderna y elegante.",
       features: [
-        "Bordes pulidos",
-        "Base estabilizadora",
-        "Superficie sellada",
-        "Fácil de limpiar",
+        "Ducha tipo walk-in",
+        "Ducha tipo lluvia en techo",
+        "Ducha secundaria lateral",
+        "Nichos empotrados para productos",
       ],
       materials: [
-        "Travertino Natural",
-        "Acero Negro Mate",
-        "Cristal de Seguridad",
-      ],
-    },
-    {
-      id: 8,
-      title: "Pared Cerámica Decorativa",
-      category: "cerámica",
-      year: 2023,
-      mainImage:
-        "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=1200",
-      images: [
-        "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=1200",
-      ],
-      description:
-        "Pared decorativa con cerámica texturizada en patrón geométrico. Acabado brillante que refleja la luz natural del espacio.",
-      features: [
-        "Efecto 3D",
-        "Resistente a la humedad",
-        "Fácil limpieza",
-        "Instalación sin juntas visibles",
-      ],
-      materials: [
-        "Cerámica Texturizada",
-        "Adhesivo de Alto Rendimiento",
-        "Lechada Color Personalizado",
+        "Revestimiento tipo mármol",
+        "Mosaico decorativo",
+        "Acero inoxidable",
       ],
     },
   ];
@@ -283,6 +151,20 @@ const Gallery = () => {
   const handleCloseProjectDetails = () => {
     setSelectedProject(null);
     setCurrentImageIndex(0);
+  };
+
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    handleCloseProjectDetails();
+
+    if (window.location.pathname === "/") {
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = "/#contact";
+    }
   };
 
   return (
@@ -388,26 +270,30 @@ const Gallery = () => {
               key={item.id}
               className={`group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
                 viewMode === "list" ? "flex flex-col md:flex-row" : ""
-              } animate-fade-in`}
+              }`}
             >
               <div
-                className={`relative ${
+                className={`relative overflow-hidden ${
                   viewMode === "list"
                     ? "md:w-1/3 min-h-[250px] md:min-h-[300px]"
                     : "h-64 md:h-72"
                 }`}
               >
-                <img
-                  src={item.mainImage}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Imagen local desde public - REDUCIDO EL ZOOM A 102% */}
+                <div className="w-full h-full">
+                  <img
+                    src={item.mainImage}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
+                    loading="lazy"
+                    style={{ transformOrigin: "center center" }}
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <button
                   onClick={() => handleOpenProjectDetails(item)}
-                  className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   aria-label="Ver detalles del proyecto"
                 >
                   <div className="bg-white/20 backdrop-blur-sm p-3 md:p-4 rounded-full">
@@ -492,7 +378,7 @@ const Gallery = () => {
         {/* Modal para imagen ampliada */}
         {selectedImage && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 animate-fade-in"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
             onClick={() => setSelectedImage(null)}
           >
             <div
@@ -509,15 +395,15 @@ const Gallery = () => {
                 className="absolute top-4 right-4 text-white bg-black/50 hover:bg-black/80 p-2 rounded-full transition-colors"
                 aria-label="Cerrar"
               >
-                ✕
+                <X className="h-5 w-5" />
               </button>
             </div>
           </div>
         )}
 
-        {/* Modal de Detalles del Proyecto - Corregido para responsive */}
+        {/* Modal de Detalles del Proyecto - CON IMAGEN SIN ZOOM */}
         {selectedProject && (
-          <div className="fixed inset-0 z-50 overflow-y-auto bg-black/90 animate-fade-in">
+          <div className="fixed inset-0 z-50 overflow-y-auto bg-black/90">
             <div className="min-h-full flex items-start md:items-center justify-center p-2 md:p-4">
               <div className="bg-white rounded-2xl w-full max-w-6xl max-h-[90vh] md:max-h-[95vh] overflow-hidden mx-auto my-4 md:my-0">
                 {/* Header del Modal */}
@@ -547,15 +433,22 @@ const Gallery = () => {
                 </div>
 
                 <div className="overflow-y-auto max-h-[calc(90vh-80px)] md:max-h-[calc(95vh-80px)]">
-                  {/* Carrusel de Imágenes */}
-                  <div className="relative h-48 md:h-96 bg-stone-900">
-                    <img
-                      src={selectedProject.images[currentImageIndex]}
-                      alt={selectedProject.title}
-                      className="w-full h-full object-cover"
-                    />
+                  {/* Carrusel de Imágenes - SIN ZOOM */}
+                  <div className="relative bg-stone-900 flex items-center justify-center min-h-[300px] md:min-h-[400px] max-h-[50vh]">
+                    <div className="w-full h-full flex items-center justify-center p-4">
+                      <img
+                        src={selectedProject.images[currentImageIndex]}
+                        alt={`${selectedProject.title} - Imagen ${currentImageIndex + 1}`}
+                        className="max-w-full max-h-full object-contain"
+                        style={{
+                          maxHeight: "calc(50vh - 2rem)",
+                          width: "auto",
+                          height: "auto",
+                        }}
+                      />
+                    </div>
 
-                    {/* Navegación del carrusel */}
+                    {/* Navegación del carrusel - SOLO SI HAY MÁS DE 1 IMAGEN */}
                     {selectedProject.images.length > 1 && (
                       <>
                         <button
@@ -660,7 +553,7 @@ const Gallery = () => {
                           </p>
                           <a
                             href="#contact"
-                            onClick={handleCloseProjectDetails}
+                            onClick={handleContactClick}
                             className="inline-block w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 md:py-3 px-4 md:px-6 rounded-lg transition-colors text-sm md:text-base"
                           >
                             Solicitar Cotización
