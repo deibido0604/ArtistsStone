@@ -7,6 +7,8 @@ import {
   Filter,
   X,
   ExternalLink,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 interface ProjectItem {
@@ -15,6 +17,7 @@ interface ProjectItem {
   category: string;
   year: number;
   mainImage: string;
+  images: string[];
   description: string;
   features: string[];
   materials: string[];
@@ -27,6 +30,7 @@ const Gallery: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
     null
   );
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const projectItems: ProjectItem[] = [
     {
@@ -35,6 +39,7 @@ const Gallery: React.FC = () => {
       category: "granito",
       year: 2024,
       mainImage: "/gallery/Cocina_Isla_Granito.png",
+      images: ["/gallery/Cocina_Isla_Granito.png"],
       description: "Cocina moderna con isla central en granito cafe absoluto.",
       features: [
         "Isla central con almacenamiento",
@@ -52,7 +57,8 @@ const Gallery: React.FC = () => {
       title: "Cocina con Barra y Encimera de Granito",
       category: "granito",
       year: 2024,
-      mainImage: "/gallery/Encimera_Cocina_Granito.png",
+      mainImage: "/gallery/Encimera_Cocina_Granito.jpg",
+      images: ["/gallery/Encimera_Cocina_Granito.jpg"],
       description:
         "Cocina con barra funcional y encimera de granito natural, ideal para espacios compactos y modernos.",
       features: [
@@ -69,6 +75,7 @@ const Gallery: React.FC = () => {
       category: "baño",
       year: 2024,
       mainImage: "/gallery/Ducha_Lujo_Ceramica.png",
+      images: ["/gallery/Ducha_Lujo_Ceramica.png"],
       description:
         "Ducha tipo walk-in con revestimiento tipo mármol en tonos claros, iluminación empotrada y sistema de ducha doble para una experiencia moderna y elegante.",
       features: [
@@ -81,6 +88,136 @@ const Gallery: React.FC = () => {
         "Revestimiento tipo mármol",
         "Mosaico decorativo",
         "Acero inoxidable",
+      ],
+    },
+    {
+      id: 4,
+      title: "Baño Elegante con Mueble de Madera y Doble Lavabo",
+      category: "baño",
+      year: 2021,
+      mainImage: "/gallery/Muebles_Baños_1.jpg",
+      images: ["/gallery/Muebles_Baños_1.jpg", "/gallery/Muebles_Baños_2.jpg"],
+      description:
+        "Baño moderno con mueble de madera natural y doble lavabo, combinado con encimera clara, grifería oscura y un diseño decorativo que aporta elegancia y personalidad al espacio.",
+      features: [
+        "Mueble de baño con doble lavabo",
+        "Amplio espacio de almacenamiento",
+        "Espejos individuales con iluminación superior",
+        "Diseño simétrico y funcional",
+      ],
+      materials: [
+        "Madera natural",
+        "Encimera tipo cuarzo",
+        "Cerámica decorativa",
+        "Acero inoxidable",
+      ],
+    },
+    {
+      id: 5,
+      title: "Piso Cerámico Decorativo con Diseño Geométrico",
+      category: "cerámica",
+      year: 2023,
+      mainImage: "/gallery/Ceramica_2.jpg",
+      images: ["/gallery/Ceramica_2.jpg", "/gallery/Ceramica_3.jpg"],
+      description:
+        "Piso cerámico con diseño geométrico tipo estrella en contraste blanco y negro, ideal para entradas, pasillos o espacios interiores que buscan un detalle visual elegante y distintivo.",
+      features: [
+        "Diseño geométrico tipo estrella",
+        "Instalación decorativa personalizada",
+        "Alto contraste visual",
+        "Acabado preciso y simétrico",
+      ],
+      materials: ["Cerámica pulida", "Piezas cerámicas de corte especial"],
+    },
+    {
+      id: 6,
+      title: "Ducha Moderna con Cerámica Tipo Espina de Pez",
+      category: "baño",
+      year: 2023,
+      mainImage: "/gallery/Ceramica_Baño.jpg",
+      images: ["/gallery/Ceramica_Baño.jpg"],
+      description:
+        "Ducha moderna con diseño walk-in, combinación de cerámica blanca tipo espina de pez y mosaico negro decorativo, logrando un estilo elegante, minimalista y funcional.",
+      features: [
+        "Diseño walk-in sin puertas",
+        "Cerámica tipo espina de pez",
+        "Mosaico decorativo en contraste",
+        "Repisas empotradas",
+        "Acabados modernos",
+      ],
+      materials: [
+        "Cerámica blanca",
+        "Mosaico hexagonal",
+        "Grifería negra mate",
+      ],
+    },
+    {
+      id: 7,
+      title: "Piso Cerámico Decorativo con Diseño Geométrico",
+      category: "cerámica",
+      year: 2022,
+      mainImage: "/gallery/Ceramica_4.jpg",
+      images: ["/gallery/Ceramica_4.jpg", "/gallery/Ceramica_5.jpg"],
+      description:
+        "Piso cerámico con diseño geométrico tipo circular en contraste blanco y negro, ideal para entradas, pasillos o espacios interiores que buscan un detalle visual elegante y distintivo.",
+      features: [
+        "Diseño geométrico tipo circular",
+        "Instalación decorativa personalizada",
+        "Alto contraste visual",
+        "Acabado preciso y simétrico",
+      ],
+      materials: ["Cerámica pulida", "Piezas cerámicas de corte especial"],
+    },
+    {
+      id: 8,
+      title: "Baño Elegante con Mueble de Madera y Doble Lavabo",
+      category: "baño",
+      year: 2021,
+      mainImage: "/gallery/Muebles_Baños_1.jpg",
+      images: ["/gallery/Muebles_Baños_1.jpg"],
+      description:
+        "Baño moderno con mueble de madera natural y doble lavabo, combinado con encimera clara, grifería oscura y un diseño decorativo que aporta elegancia y personalidad al espacio.",
+      features: [
+        "Mueble de baño con doble lavabo",
+        "Amplio espacio de almacenamiento",
+        "Espejos individuales con iluminación superior",
+        "Diseño simétrico y funcional",
+      ],
+      materials: [
+        "Madera natural",
+        "Encimera tipo cuarzo",
+        "Cerámica decorativa",
+        "Acero inoxidable",
+      ],
+    },
+
+    {
+      id: 9,
+      title:
+        "Cocina a Medida de Madera Pura Color Café con Isla y Encimera de Granito",
+      category: "muebles",
+      year: 2024,
+      mainImage: "/gallery/Muebles_Isla_1.jpg",
+      images: [
+        "/gallery/Muebles_Isla_1.jpg",
+        "/gallery/Muebles_Isla_2.jpg",
+        "/gallery/Muebles_Isla_3.jpg",
+      ],
+      description:
+        "Cocina integral a medida fabricada en madera pura color café, con isla central funcional y encimera de granito natural que combina elegancia, funcionalidad y calidez en el diseño.",
+      features: [
+        "Muebles a medida de madera pura color café",
+        "Isla central con almacenamiento integrado",
+        "Encimera de granito natural de alta resistencia",
+        "Diseño ergonómico con distribución funcional",
+        "Acabados personalizados y herrajes premium",
+      ],
+      materials: [
+        "Madera pura de alta calidad",
+        "Granito natural para encimera",
+        "Herrajes de acero inoxidable",
+        "Bisagras con cierre suave",
+        "Tiradores de aluminio anodizado",
       ],
     },
   ];
@@ -96,6 +233,16 @@ const Gallery: React.FC = () => {
       id: "baño",
       name: "Baños",
       count: projectItems.filter((i) => i.category === "baño").length,
+    },
+    {
+      id: "cerámica",
+      name: "Cerámica",
+      count: projectItems.filter((i) => i.category === "cerámica").length,
+    },
+    {
+      id: "muebles",
+      name: "Muebles a medida",
+      count: projectItems.filter((i) => i.category === "muebles").length,
     },
   ];
 
@@ -131,10 +278,32 @@ const Gallery: React.FC = () => {
 
   const handleOpenDetails = (project: ProjectItem) => {
     setSelectedProject(project);
+    setCurrentImageIndex(0);
   };
 
   const handleCloseDetails = () => {
     setSelectedProject(null);
+    setCurrentImageIndex(0);
+  };
+
+  const handleNextImage = () => {
+    if (selectedProject) {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === selectedProject.images.length - 1 ? 0 : prevIndex + 1
+      );
+    }
+  };
+
+  const handlePrevImage = () => {
+    if (selectedProject) {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === 0 ? selectedProject.images.length - 1 : prevIndex - 1
+      );
+    }
+  };
+
+  const handleSelectImage = (index: number) => {
+    setCurrentImageIndex(index);
   };
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -273,6 +442,12 @@ const Gallery: React.FC = () => {
                     style={{ transformOrigin: "center center" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  {item.images.length > 1 && (
+                    <div className="absolute bottom-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      +{item.images.length - 1} más
+                    </div>
+                  )}
                 </div>
 
                 <button
@@ -323,7 +498,10 @@ const Gallery: React.FC = () => {
                     onClick={() => handleOpenDetails(item)}
                     className="text-amber-700 font-semibold hover:text-amber-800 flex items-center gap-2 text-sm md:text-base"
                   >
-                    Ver detalles
+                    Ver{" "}
+                    {item.images.length > 1
+                      ? `${item.images.length} fotos`
+                      : "detalles"}
                     <ExternalLink className="h-3 w-3 md:h-4 md:w-4" />
                   </button>
                 </div>
@@ -362,14 +540,14 @@ const Gallery: React.FC = () => {
         {selectedProject && (
           <div className="fixed inset-0 z-50 overflow-y-auto bg-black/90">
             <div className="min-h-full flex items-start md:items-center justify-center p-2 md:p-4">
-              <div className="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] md:max-h-[95vh] overflow-hidden mx-auto my-4 md:my-0">
+              <div className="bg-white rounded-2xl w-full max-w-6xl max-h-[90vh] md:max-h-[95vh] overflow-hidden mx-auto my-4 md:my-0">
                 {/* Header del Modal */}
-                <div className="sticky top-0 bg-white border-b border-stone-200 p-4 md:p-6 flex justify-between items-center z-10">
+                <div className="sticky top-0 bg-white border-b border-stone-200 p-4 md:p-5 flex justify-between items-center z-10">
                   <div className="pr-4">
-                    <h2 className="text-lg md:text-2xl font-bold text-stone-900">
+                    <h2 className="text-lg md:text-xl font-bold text-stone-900">
                       {selectedProject.title}
                     </h2>
-                    <div className="flex items-center gap-2 mt-2">
+                    <div className="flex items-center gap-2 mt-1">
                       <span
                         className={`px-2 py-1 md:px-3 md:py-1 text-white text-xs md:text-sm font-semibold rounded-full ${getCategoryColor(selectedProject.category)}`}
                       >
@@ -389,18 +567,68 @@ const Gallery: React.FC = () => {
                   </button>
                 </div>
 
-                <div className="overflow-y-auto max-h-[calc(90vh-80px)] md:max-h-[calc(95vh-80px)]">
-                  <div className="relative bg-stone-900 flex items-center justify-center min-h-[200px] md:min-h-[250px]">
-                    <div className="w-full h-full flex items-center justify-center p-4">
+                <div className="overflow-y-auto max-h-[calc(90vh-65px)] md:max-h-[calc(95vh-65px)]">
+                  <div className="relative bg-stone-900 min-h-[250px] md:min-h-[400px]">
+                    <div className="w-full h-full flex items-center justify-center p-2 md:p-4">
                       <img
-                        src={selectedProject.mainImage}
-                        alt={selectedProject.title}
-                        className="max-w-full max-h-64 object-cover rounded-2xl"
+                        src={selectedProject.images[currentImageIndex]}
+                        alt={`${selectedProject.title} - Imagen ${currentImageIndex + 1}`}
+                        className="max-w-full max-h-[70vh] w-auto h-auto object-contain rounded-lg"
                       />
                     </div>
+
+                    {selectedProject.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={handlePrevImage}
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 md:p-3 rounded-full transition-colors"
+                          aria-label="Imagen anterior"
+                        >
+                          <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+                        </button>
+
+                        <button
+                          onClick={handleNextImage}
+                          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 md:p-3 rounded-full transition-colors"
+                          aria-label="Imagen siguiente"
+                        >
+                          <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+                        </button>
+
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
+                          {currentImageIndex + 1} /{" "}
+                          {selectedProject.images.length}
+                        </div>
+                      </>
+                    )}
                   </div>
 
-                  <div className="p-4 md:p-8">
+                  {selectedProject.images.length > 1 && (
+                    <div className="bg-stone-800 p-3 md:p-4">
+                      <div className="flex gap-2 md:gap-3 overflow-x-auto pb-2">
+                        {selectedProject.images.map((image, index) => (
+                          <button
+                            key={index}
+                            onClick={() => handleSelectImage(index)}
+                            className={`flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 transition-all ${
+                              currentImageIndex === index
+                                ? "border-amber-500 border-3"
+                                : "border-transparent hover:border-white/50"
+                            }`}
+                            aria-label={`Ver imagen ${index + 1}`}
+                          >
+                            <img
+                              src={image}
+                              alt={`Miniatura ${index + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="p-4 md:p-6">
                     <div className="space-y-6">
                       <div>
                         <h3 className="text-lg md:text-xl font-bold text-stone-900 mb-3 md:mb-4">

@@ -32,12 +32,12 @@ const Services = () => {
     },
     {
       id: 2,
-      title: "Cerámica y Tablaroca",
+      title: "Cerámica y Pisos de PVC",
       description:
-        "Instalación profesional de cerámica y trabajos en tablaroca para cualquier espacio.",
+        "Instalación profesional de cerámica, pisos de PVC y trabajos en tablaroca para cualquier espacio.",
       icon: "Gem",
       category: "ceramica",
-      features: ["Cerámica", "Porcelanato", "Tablaroca"],
+      features: ["Cerámica", "Porcelanato", "Tablaroca", "Pisos de Pvc"],
     },
     {
       id: 3,
