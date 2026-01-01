@@ -35,7 +35,7 @@ const Header = () => {
                 <img
                   src="/Stone Logo 3.png"
                   alt="Stone Artists Logo"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover"
                 />
               </div>
 

@@ -1,4 +1,5 @@
-import { Facebook, Heart } from "lucide-react";
+import { Facebook, Heart, Instagram } from "lucide-react";
+import TikTokIcon from "./TikTokIcon";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,13 +30,19 @@ const Footer = () => {
               >
                 <Facebook className="h-5 w-5" />
               </a>
-              {/* <a
-                href="#"
+              <a
+                href="https://www.instagram.com/stoneartistshn?igsh=MXcwNnF3a3l3ZGdhNw=="
                 className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
+                href="https://vm.tiktok.com/ZMHENdD9kgEt4-gVc35/"
+                className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors"
+              >
+                <TikTokIcon className="h-5 w-5" />
+              </a>
+              {/* <a
                 href="#"
                 className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors"
               >
