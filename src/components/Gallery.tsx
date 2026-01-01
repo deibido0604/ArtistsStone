@@ -184,29 +184,6 @@ const Gallery: React.FC = () => {
     },
     {
       id: 8,
-      title: "Baño Elegante con Mueble de Madera y Doble Lavabo",
-      category: "baño",
-      year: 2021,
-      mainImage: "/gallery/Muebles_Baños_1.jpg",
-      images: ["/gallery/Muebles_Baños_1.jpg"],
-      description:
-        "Baño moderno con mueble de madera natural y doble lavabo, combinado con encimera clara, grifería oscura y un diseño decorativo que aporta elegancia y personalidad al espacio.",
-      features: [
-        "Mueble de baño con doble lavabo",
-        "Amplio espacio de almacenamiento",
-        "Espejos individuales con iluminación superior",
-        "Diseño simétrico y funcional",
-      ],
-      materials: [
-        "Madera natural",
-        "Encimera tipo cuarzo",
-        "Cerámica decorativa",
-        "Acero inoxidable",
-      ],
-    },
-
-    {
-      id: 9,
       title:
         "Cocina a Medida de Madera Pura Color Café con Isla y Encimera de Granito",
       category: "muebles",
