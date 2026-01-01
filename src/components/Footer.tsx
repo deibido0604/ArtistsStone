@@ -1,4 +1,3 @@
-import React from "react";
 import { Facebook, Heart } from "lucide-react";
 
 const Footer = () => {
@@ -13,7 +12,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-6">
               <div className="h-10 w-10 bg-gradient-to-r from-amber-600 to-amber-800 rounded-full"></div>
               <div>
-                <h2 className="text-2xl font-bold">Artist's Stone</h2>
+                <h2 className="text-2xl font-bold">Stone Artists</h2>
                 <p className="text-stone-400 text-sm">
                   Muebles de granito y más
                 </p>
@@ -25,7 +24,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=100065388912790"
                 className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors"
               >
                 <Facebook className="h-5 w-5" />

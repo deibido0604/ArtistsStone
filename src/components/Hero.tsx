@@ -28,7 +28,7 @@ const Hero = () => {
                     </h1>
 
                     <p className="text-xl text-stone-200 mb-8">
-                        En <span className="font-semibold">Artist's Stone</span> creamos muebles de granito, comedores y baños que combinan
+                        En <span className="font-semibold">Stone Artists </span> creamos muebles de granito, comedores y baños que combinan
                         durabilidad excepcional con diseño innovador. Transformamos espacios con
                         materiales de la más alta calidad.
                     </p>

@@ -20,7 +20,7 @@ const Contact = () => {
     setError("");
 
     try {
-      const response = await fetch("https://formspree.io/f/xqekewev", {
+      const response = await fetch("https://formspree.io/f/xkognkwk", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -374,7 +374,7 @@ const Contact = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Cobertura nacional - Artist's Stone Honduras"
+                title="Cobertura nacional - Stone Artists Honduras"
                 className="rounded-2xl"
               ></iframe>
             </div>

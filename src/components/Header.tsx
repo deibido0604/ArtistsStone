@@ -22,14 +22,18 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="h-10 w-10 bg-gradient-to-r from-stone-800 to-stone-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">AS</span>
+          {/* Logo con imagen */}
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="h-12 w-12 flex items-center justify-center rounded-full overflow-hidden">
+              <img
+                src="/Stone Logo 3.png"
+                alt="Artist's Stone Logo"
+                className="h-full w-full object-cover"
+              />
             </div>
-            <div>
+            <div className="hidden sm:block">
               <h1 className="text-2xl font-bold text-stone-800">
-                Artist's Stone
+                Stone Artists
               </h1>
               <p className="text-xs text-stone-500">Artistas de la piedra</p>
             </div>
@@ -121,11 +125,13 @@ const Header = () => {
               <div className="pt-4 border-t border-gray-200 space-y-3">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-amber-700" />
-                  <span className="text-stone-700">(123) 456-7890</span>
+                  <span className="text-stone-700">+504 3225-8461</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-5 w-5 text-amber-700" />
-                  <span className="text-stone-700">Ciudad, País</span>
+                  <span className="text-stone-700">
+                    San Pedro Sula, Honduras
+                  </span>
                 </div>
               </div>
             </div>

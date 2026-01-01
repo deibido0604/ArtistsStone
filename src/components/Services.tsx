@@ -347,7 +347,7 @@ const Services = () => {
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-stone-900 mb-4">
                 ¿Por qué elegir{" "}
-                <span className="text-amber-700">Artist's Stone</span>?
+                <span className="text-amber-700">Stone Artists</span>?
               </h3>
               <p className="text-stone-600 max-w-2xl mx-auto">
                 Más de 10 años de experiencia transformando espacios con
