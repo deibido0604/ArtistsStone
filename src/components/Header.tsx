@@ -33,7 +33,7 @@ const Header = () => {
                 }}
               >
                 <img
-                  src="/Stone Logo 3.png"
+                  src="/Stone Logo 4.png"
                   alt="Stone Artists Logo"
                   className="h-full w-full object-cover"
                 />
@@ -166,7 +166,7 @@ const Header = () => {
         >
           <div className="relative" onClick={(e) => e.stopPropagation()}>
             <img
-              src="/Stone Logo 3.png"
+              src="/Stone Logo 4.png"
               alt="Stone Artists Logo"
               className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-xl"
             />
