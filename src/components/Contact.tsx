@@ -82,7 +82,7 @@ const Contact = () => {
           </h2>
           <p className="text-xl text-stone-600 max-w-3xl mx-auto">
             Solicita una cotización gratuita y recibe asesoría personalizada de
-            nuestros expertos.
+            nuestros expertos. <span className="text-amber-700 font-semibold">¡Trabajamos en todo Honduras!</span>
           </p>
         </div>
 
@@ -138,7 +138,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white text-stone-900 placeholder:text-stone-500"
-                      placeholder="+1 (123) 456-7890"
+                      placeholder="+504 88447-0000"
                     />
                   </div>
                 </div>
@@ -172,20 +172,41 @@ const Contact = () => {
                     <option value="" className="text-stone-500">
                       Selecciona un servicio
                     </option>
-                    <option value="granito" className="text-stone-900">
-                      Muebles de Granito
-                    </option>
-                    <option value="comedor" className="text-stone-900">
-                      Comedores
-                    </option>
-                    <option value="baño" className="text-stone-900">
-                      Baños
+                    <option value="plomeria" className="text-stone-900">
+                      Plomería Completa
                     </option>
                     <option value="ceramica" className="text-stone-900">
-                      Cerámica
+                      Cerámica y Pisos de PVC
                     </option>
-                    <option value="diseno" className="text-stone-900">
-                      Diseño Personalizado
+                    <option value="baño" className="text-stone-900">
+                      Remodelaciones de Baño
+                    </option>
+                    <option value="granito" className="text-stone-900">
+                      Granito, Cuarzo y Mármol
+                    </option>
+                    <option value="muebles" className="text-stone-900">
+                      Muebles a Medida
+                    </option>
+                    <option value="electricidad" className="text-stone-900">
+                      Instalaciones Eléctricas
+                    </option>
+                    <option value="pintura" className="text-stone-900">
+                      Pintura Interior/Exterior
+                    </option>
+                    <option value="pergolas" className="text-stone-900">
+                      Pérgolas y Estructuras
+                    </option>
+                    <option value="cocinas" className="text-stone-900">
+                      Cocinas Exteriores
+                    </option>
+                    <option value="piscinas" className="text-stone-900">
+                      Piscinas
+                    </option>
+                    <option value="refrigeracion" className="text-stone-900">
+                      Refrigeración
+                    </option>
+                    <option value="jardineria" className="text-stone-900">
+                      Jardinería
                     </option>
                     <option value="otro" className="text-stone-900">
                       Otro
@@ -262,9 +283,19 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="bg-gradient-to-br from-stone-900 to-stone-800 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-8">
-                Información de <span className="text-amber-400">contacto</span>
-              </h3>
+              <div className="mb-6">
+                <div className="inline-flex items-center px-4 py-2 bg-amber-600/30 rounded-full mb-4">
+                  <span className="text-amber-300 font-semibold text-sm">
+                    🚚 COBERTURA NACIONAL
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold">
+                  Servicios en <span className="text-amber-400">todo Honduras</span>
+                </h3>
+                <p className="text-stone-300 mt-2">
+                  Atendemos proyectos en todas las regiones del país
+                </p>
+              </div>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -273,8 +304,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Teléfono</h4>
-                    <p className="text-stone-300">(123) 456-7890</p>
-                    <p className="text-stone-300">(098) 765-4321</p>
+                    <p className="text-stone-300">+504 3225-8461</p>
+                    <p className="text-stone-400 text-sm mt-1">
+                      Línea nacional - Llámanos desde cualquier ciudad
+                    </p>
                   </div>
                 </div>
 
@@ -286,8 +319,7 @@ const Contact = () => {
                     <h4 className="font-bold text-lg mb-1">
                       Correo electrónico
                     </h4>
-                    <p className="text-stone-300">info@artistsstone.com</p>
-                    <p className="text-stone-300">ventas@artistsstone.com</p>
+                    <p className="text-stone-300">stoneartists@hotmail.com</p>
                   </div>
                 </div>
 
@@ -296,11 +328,15 @@ const Contact = () => {
                     <MapPin className="h-6 w-6 text-amber-400" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-1">Dirección</h4>
+                    <h4 className="font-bold text-lg mb-1">Área de Servicio</h4>
                     <p className="text-stone-300">
-                      Av. Principal 1234
+                      <span className="text-amber-300 font-semibold">¡Trabajamos en todo Honduras!</span>
                       <br />
-                      Ciudad, País 12345
+                      Oficina central en San Pedro Sula
+                      <br />
+                      <span className="text-stone-400 text-sm">
+                        Atendemos: Tegucigalpa, La Ceiba, Comayagua, Choluteca, etc.
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -323,17 +359,22 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Mapa con Google Maps Embed - Fijo */}
-            <div className="bg-gradient-to-br from-stone-100 to-stone-50 rounded-2xl overflow-hidden h-64">
+            {/* Mapa de Honduras */}
+            <div className="bg-gradient-to-br from-stone-100 to-stone-50 rounded-2xl overflow-hidden h-64 relative">
+              <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+                <div className="bg-amber-600/90 text-white px-6 py-3 rounded-full">
+                  <span className="font-bold">🇭🇳 Trabajamos en todo Honduras</span>
+                </div>
+              </div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.031036769731!2d-87.982469!3d15.502715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDMwJzA5LjgiTiA4N8KwNTgnNTYuOSJX!5e0!3m2!1ses!2shn"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d984888.8368311972!2d-87.95322614999999!3d15.199999999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6a5d6d9b8b8b8b%3A0x8f6a5d6d9b8b8b8b!2sHonduras!5e0!3m2!1ses!2shn!4v1690838400000!5m2!1ses!2shn"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
+                style={{ border: 0, filter: "hue-rotate(15deg) saturate(1.2)" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Nuestra ubicación - Artist's Stone"
+                title="Cobertura nacional - Artist's Stone Honduras"
                 className="rounded-2xl"
               ></iframe>
             </div>
@@ -346,11 +387,11 @@ const Contact = () => {
                     ¿Necesitas ayuda inmediata?
                   </h4>
                   <p className="text-green-100">
-                    Chatea con nosotros por WhatsApp
+                    Chatea con nosotros por WhatsApp desde cualquier parte del país
                   </p>
                 </div>
                 <a
-                  href="https://wa.me/50412345678?text=Hola%20Artist's%20Stone,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios"
+                  href="https://wa.me/50432258461?text=Hola%20Artist's%20Stone,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios%20en%20Honduras"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-block"

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Facebook, Instagram, Twitter, Youtube, Heart } from 'lucide-react';
+import React from "react";
+import { Facebook, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,26 +14,40 @@ const Footer = () => {
               <div className="h-10 w-10 bg-gradient-to-r from-amber-600 to-amber-800 rounded-full"></div>
               <div>
                 <h2 className="text-2xl font-bold">Artist's Stone</h2>
-                <p className="text-stone-400 text-sm">Muebles de granito y más</p>
+                <p className="text-stone-400 text-sm">
+                  Muebles de granito y más
+                </p>
               </div>
             </div>
             <p className="text-stone-400 mb-6">
-              Transformamos espacios con muebles de granito, comedores y baños 
-              de la más alta calidad desde 1995.
+              Transformamos espacios con muebles de granito, comedores y baños
+              de la más alta calidad.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors">
+              <a
+                href="#"
+                className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors">
+              {/* <a
+                href="#"
+                className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors">
+              <a
+                href="#"
+                className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors">
+              <a
+                href="#"
+                className="bg-stone-800 hover:bg-amber-600 p-2 rounded-full transition-colors"
+              >
                 <Youtube className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -41,12 +55,46 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6">Enlaces rápidos</h3>
             <ul className="space-y-3">
-              <li><a href="#home" className="text-stone-400 hover:text-amber-400 transition-colors">Inicio</a></li>
-              <li><a href="#products" className="text-stone-400 hover:text-amber-400 transition-colors">Productos</a></li>
-              <li><a href="#services" className="text-stone-400 hover:text-amber-400 transition-colors">Servicios</a></li>
-              <li><a href="#gallery" className="text-stone-400 hover:text-amber-400 transition-colors">Galería</a></li>
-              <li><a href="#testimonials" className="text-stone-400 hover:text-amber-400 transition-colors">Testimonios</a></li>
-              <li><a href="#contact" className="text-stone-400 hover:text-amber-400 transition-colors">Contacto</a></li>
+              <li>
+                <a
+                  href="#home"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Inicio
+                </a>
+              </li>
+              {/* <li>
+                <a
+                  href="#products"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Productos
+                </a>
+              </li> */}
+              <li>
+                <a
+                  href="#gallery"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Proyectos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Servicios
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Contacto
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -54,12 +102,54 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6">Productos</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">Granito para Cocina</a></li>
-              <li><a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">Comedores de Mármol</a></li>
-              <li><a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">Muebles de Baño</a></li>
-              <li><a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">Cerámica Importada</a></li>
-              <li><a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">Encimeras de Cuarzo</a></li>
-              <li><a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">Pisos de Porcelanato</a></li>
+              <li>
+                <a
+                  href="#"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Granito para Cocina
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Comedores de Mármol
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Muebles de Baño
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Cerámica Importada
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Encimeras de Cuarzo
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-stone-400 hover:text-amber-400 transition-colors"
+                >
+                  Pisos de Porcelanato
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -70,22 +160,32 @@ const Footer = () => {
             <p className="text-stone-400 mb-4 md:mb-0">
               © {currentYear} Artist's Stone. Todos los derechos reservados.
             </p>
-            <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">
+            {/* <div className="flex items-center space-x-6 text-sm">
+              <a
+                href="#"
+                className="text-stone-400 hover:text-amber-400 transition-colors"
+              >
                 Términos y condiciones
               </a>
-              <a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">
+              <a
+                href="#"
+                className="text-stone-400 hover:text-amber-400 transition-colors"
+              >
                 Política de privacidad
               </a>
-              <a href="#" className="text-stone-400 hover:text-amber-400 transition-colors">
+              <a
+                href="#"
+                className="text-stone-400 hover:text-amber-400 transition-colors"
+              >
                 Política de cookies
               </a>
-            </div>
+            </div> */}
           </div>
-          
+
           <div className="mt-8 text-center text-stone-500 text-sm">
             <p className="flex items-center justify-center">
-              Hecho con <Heart className="h-4 w-4 text-red-500 mx-1" /> para transformar espacios
+              Hecho con <Heart className="h-4 w-4 text-red-500 mx-1" /> para
+              transformar espacios
             </p>
           </div>
         </div>

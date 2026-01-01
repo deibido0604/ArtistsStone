@@ -6,7 +6,6 @@ import Hero from './components/Hero';
 import Gallery from './components/Gallery';
 import Services from './components/Services';
 import Contact from './components/Contact';
-import Productos from './components/Productos';
 
 const ScrollToHash = () => {
   const location = useLocation();
@@ -56,7 +55,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/productos" element={<Productos />} />
+            {/* <Route path="/productos" element={<Productos />} /> */}
           </Routes>
         </main>
         <Footer />
