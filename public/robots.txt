@@ -1,3 +1,67 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemaps
+Sitemap: https://stoneartistshn.com/sitemap.xml
+
+# Prevenir rastreo de archivos sensibles
+Disallow: /private/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search/
+Disallow: /*?*
+Disallow: /*.php$
+Disallow: /*.json$
+Disallow: /*.env$
+Disallow: /*.sql$
+
+# Permitir Google Ads
+User-agent: AdsBot-Google
+Allow: /
+
+# Permitir Google Image Search
+User-agent: Googlebot-Image
+Allow: /
+
+# Permitir Googlebot para videos
+User-agent: Googlebot-Video
+Allow: /
+
+# Twitter bot
+User-agent: Twitterbot
+Allow: /
+
+# Facebook bot
+User-agent: FacebookExternalHit
+Allow: /
+
+# LinkedIn bot
+User-agent: LinkedInBot
+Allow: /
+
+# Crawl-delay para bots más lentos
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Bloquear bots maliciosos conocidos
+User-agent: dotbot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Host
+Host: https://stoneartistshn.com
