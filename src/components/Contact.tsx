@@ -403,7 +403,7 @@ const Contact = () => {
                   </p>
                 </div>
                 <a
-                  href="https://wa.me/50432148918?text=Hola%20Artist's%20Stone,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios%20en%20Honduras"
+                  href="https://wa.me/50432148918?text=Hola%20Stone%20Artists,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios%20en%20Honduras"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors whitespace-nowrap"
@@ -424,7 +424,7 @@ const Contact = () => {
                   </p>
                 </div>
                 <a
-                  href="https://wa.me/50432148930?text=Hola%20Artist's%20Stone,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios%20en%20Honduras"
+                  href="https://wa.me/50432148930?text=Hola%20Stone%20Artists,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios%20en%20Honduras"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors whitespace-nowrap"
