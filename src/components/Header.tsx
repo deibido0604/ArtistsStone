@@ -87,7 +87,13 @@ const Header = () => {
               <div className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-amber-700" />
                 <span className="text-stone-700 font-medium">
-                  +504 3225-8461
+                  +504 3214-8918
+                </span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-5 w-5 text-amber-700" />
+                <span className="text-stone-700 font-medium">
+                  +504 3214-8930
                 </span>
               </div>
               <div className="flex items-center space-x-2">
@@ -143,7 +149,11 @@ const Header = () => {
                 <div className="pt-4 border-t border-gray-200 space-y-3">
                   <div className="flex items-center space-x-2">
                     <Phone className="h-5 w-5 text-amber-700" />
-                    <span className="text-stone-700">+504 3225-8461</span>
+                    <span className="text-stone-700">+504 3214-8918</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Phone className="h-5 w-5 text-amber-700" />
+                    <span className="text-stone-700">+504 3214-8930</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <MapPin className="h-5 w-5 text-amber-700" />

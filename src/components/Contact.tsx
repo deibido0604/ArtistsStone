@@ -82,7 +82,10 @@ const Contact = () => {
           </h2>
           <p className="text-xl text-stone-600 max-w-3xl mx-auto">
             Solicita una cotización gratuita y recibe asesoría personalizada de
-            nuestros expertos. <span className="text-amber-700 font-semibold">¡Trabajamos en todo Honduras!</span>
+            nuestros expertos.{" "}
+            <span className="text-amber-700 font-semibold">
+              ¡Trabajamos en todo Honduras!
+            </span>
           </p>
         </div>
 
@@ -290,7 +293,8 @@ const Contact = () => {
                   </span>
                 </div>
                 <h3 className="text-2xl font-bold">
-                  Servicios en <span className="text-amber-400">todo Honduras</span>
+                  Servicios en{" "}
+                  <span className="text-amber-400">todo Honduras</span>
                 </h3>
                 <p className="text-stone-300 mt-2">
                   Atendemos proyectos en todas las regiones del país
@@ -304,7 +308,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Teléfono</h4>
-                    <p className="text-stone-300">+504 3225-8461</p>
+                    <p className="text-stone-300">+504 3214-8918</p>
+                    <p className="text-stone-300">+504 3214-8930</p>
                     <p className="text-stone-400 text-sm mt-1">
                       Línea nacional - Llámanos desde cualquier ciudad
                     </p>
@@ -330,12 +335,15 @@ const Contact = () => {
                   <div>
                     <h4 className="font-bold text-lg mb-1">Área de Servicio</h4>
                     <p className="text-stone-300">
-                      <span className="text-amber-300 font-semibold">¡Trabajamos en todo Honduras!</span>
+                      <span className="text-amber-300 font-semibold">
+                        ¡Trabajamos en todo Honduras!
+                      </span>
                       <br />
                       Oficina central en San Pedro Sula
                       <br />
                       <span className="text-stone-400 text-sm">
-                        Atendemos: Tegucigalpa, La Ceiba, Comayagua, Choluteca, etc.
+                        Atendemos: Tegucigalpa, La Ceiba, Comayagua, Choluteca,
+                        etc.
                       </span>
                     </p>
                   </div>
@@ -363,7 +371,9 @@ const Contact = () => {
             <div className="bg-gradient-to-br from-stone-100 to-stone-50 rounded-2xl overflow-hidden h-64 relative">
               <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
                 <div className="bg-amber-600/90 text-white px-6 py-3 rounded-full">
-                  <span className="font-bold">🇭🇳 Trabajamos en todo Honduras</span>
+                  <span className="font-bold">
+                    🇭🇳 Trabajamos en todo Honduras
+                  </span>
                 </div>
               </div>
               <iframe
@@ -379,22 +389,45 @@ const Contact = () => {
               ></iframe>
             </div>
 
-            {/* WhatsApp CTA */}
-            <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 text-white">
-              <div className="flex items-center justify-between">
+            {/* WhatsApp CTAs */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* WhatsApp 3214-8918 */}
+              <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 text-white flex items-center justify-between">
                 <div>
-                  <h4 className="font-bold text-xl mb-2">
+                  <h4 className="font-bold text-xl mb-1">
                     ¿Necesitas ayuda inmediata?
                   </h4>
                   <p className="text-green-100">
-                    Chatea con nosotros por WhatsApp desde cualquier parte del país
+                    WhatsApp:{" "}
+                    <span className="font-semibold">+504 3214-8918</span>
                   </p>
                 </div>
                 <a
-                  href="https://wa.me/50432258461?text=Hola%20Artist's%20Stone,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios%20en%20Honduras"
+                  href="https://wa.me/50432148918?text=Hola%20Artist's%20Stone,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios%20en%20Honduras"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-block"
+                  className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors whitespace-nowrap"
+                >
+                  Abrir Chat
+                </a>
+              </div>
+
+              {/* WhatsApp 3214-8930 */}
+              <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 text-white flex items-center justify-between">
+                <div>
+                  <h4 className="font-bold text-xl mb-1">
+                    ¿Necesitas ayuda inmediata?
+                  </h4>
+                  <p className="text-green-100">
+                    WhatsApp:{" "}
+                    <span className="font-semibold">+504 3214-8930</span>
+                  </p>
+                </div>
+                <a
+                  href="https://wa.me/50432148930?text=Hola%20Artist's%20Stone,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios%20en%20Honduras"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors whitespace-nowrap"
                 >
                   Abrir Chat
                 </a>
