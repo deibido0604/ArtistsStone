@@ -197,7 +197,7 @@ const Contact = () => {
                       Pintura Interior/Exterior
                     </option>
                     <option value="pergolas" className="text-stone-900">
-                      Pérgolas y Estructuras
+                      Porches y Estructuras
                     </option>
                     <option value="cocinas" className="text-stone-900">
                       Cocinas Exteriores
