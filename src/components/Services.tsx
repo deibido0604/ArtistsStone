@@ -86,7 +86,7 @@ const Services = () => {
     },
     {
       id: 8,
-      title: "Pérgolas y Estructuras",
+      title: "Porches y Estructuras",
       description:
         "Diseño y construcción de estructuras para exteriores y áreas de entretenimiento.",
       icon: "Trees",
