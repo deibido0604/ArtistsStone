@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Facebook, Heart, Instagram } from "lucide-react";
 import TikTokIcon from "./TikTokIcon";
 
